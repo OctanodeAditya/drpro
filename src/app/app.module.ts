@@ -11,7 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
-import {SidebarModule} from 'primeng/sidebar';
+import {TableModule} from 'primeng/table';
+import {AvatarModule} from 'primeng/avatar';
+import {AvatarGroupModule} from 'primeng/avatargroup';
+import {MenuModule} from 'primeng/menu';
+import {MenuItem} from 'primeng/api';
+import { TagModule } from 'primeng/tag';
+
+
+
 
 
 import { HeaderComponent } from './common/header/header.component';
@@ -31,7 +39,7 @@ import { DemoComponent } from './common/demo/demo.component';
     PatientDetailComponent,
     AppointmentsComponent,
     AppointmentDetailComponent,
-    DemoComponent,
+    DemoComponent    
   ],
   imports: [
     BrowserModule,
@@ -41,7 +49,12 @@ import { DemoComponent } from './common/demo/demo.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    TableModule,
+    AvatarModule,
+    AvatarGroupModule,
+    MenuModule,
+    TagModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -38,7 +38,12 @@ $drpro-theme: mat.define-light-theme((
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-
+$primary: #0071BD;
+$primary-light:#3182CE;
+$secondary: #e7e7e7;
+$secondary-dark:#7a7a7a;
+$secondary-light:#f7f7f7;
+$white: #fff;
 
 // custom scroll
 
@@ -61,8 +66,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 // HEADER
 .header{
-  border-bottom: 1px solid #e7e7e7;
-  background: #fff;
+  border-bottom: 1px solid $secondary;
+  background: $white;
   height: 60px;
   .inner{
       display: flex;
@@ -87,20 +92,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
           padding: 0;
           .manu-item {
               font-size: 16px;
-              color: #808080;
+              color: $secondary-dark;
               cursor: pointer;
               &.active{
-                  color: #0071BD !important;
+                  color: $primary !important;
               }
           }
       }
       .divider {
           width: 1px;
-          background: #cbcbcb;
+          background: $secondary;
           margin: 0 2rem;
           height: 24px;
       }
-      .header-right{}
+      .header-right{
+        margin-left: auto;
+       .header-button{
+        display: flex;
+        align-items: center;}
+      }
   }
 }
 // LAYOUT
@@ -111,7 +121,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .sidebar-menu {
       width: 100%;
       max-width: 120px;
-      border-right: 1px solid #e7e7e7;
+      border-right: 1px solid $secondary;
       overflow: auto;
       .sidebar-manu-list {
           list-style: none;
@@ -126,7 +136,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               }
               .sidebar-item-inner {
                   text-decoration: none;
-                  color: #7a7a7a;
+                  color: $secondary-dark;
                   text-align: center;
                   display: flex;
                   flex-direction: column;
@@ -137,7 +147,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
                   align-items: center;
                   border-radius: 7px;
                   .icon {
-                      background-color: #f8f8f8;
+                      background-color: $secondary-light;
                       width: 45px;
                       height: 45px;
                       display: flex;
@@ -147,7 +157,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
                       border-radius: 50%;
                       margin-bottom: 5px;
                       .img{
-                          fill: #7A7A7A;
+                          fill: $secondary-dark;
                       }
                   }
                   .text {
@@ -158,11 +168,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
                   .sidebar-item-inner {
                       .icon {
                        .img{
-                          fill: #0071BD !important;
+                          fill: $primary !important;
                        }
                       }
                       .text{
-                          color: #0071BD;
+                          color: $primary;
                       }
                   }
 
@@ -171,8 +181,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
                   position: absolute;
                   width: 100%;
                   bottom: 0;
-                  border-top: 1px solid #E7E7E7;
-                  background: #fff;
+                  border-top: 1px solid $secondary;
+                  background: $white;
               }
           }
       }
@@ -180,7 +190,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 .body-wrapper {
-  background: #fff;
+  background: $white;
   flex: 1;
   overflow: auto;
 }
@@ -194,17 +204,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 .outline-secondary-btn {
-  background: #fff;
-  border: 1px solid #E7E7E7;
+  background: $white;
+  border: 1px solid $secondary;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
   cursor: pointer;
 }
 .primary-btn {
-  background: #0071BD;
+  background: $primary;
   border: transparent;
   padding: 0.5rem 0.8rem;
-  color: #fff;
+  color: $white;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -213,7 +223,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   align-content: center;
   margin: 0;
   padding: 1.5rem;
-  background: #f7f7f7;
+  background: $secondary-light;
   align-items: center;
   .left-toolbar {
       flex: 1;
@@ -262,7 +272,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               font-weight: 500;
           }
           p {
-              color: #7a7a7a;
+              color: $secondary-dark;
               width: 100%;
           }
       }
@@ -344,14 +354,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
                   outline: none;
               }
               &:focus{
-                  border-bottom: 1px solid #0071BD !important;
+                  border-bottom: 1px solid $primary !important;
               }
               &:active{
-                  border-bottom: 1px solid #0071BD !important;
+                  border-bottom: 1px solid $primary !important;
               }
               /* with required attribute */
               &:required {
-                  color: #3182CE;
+                  color: $primary;
                   &:valid:focus + .clear-text {
                   display: inline-block;
                   }
@@ -374,7 +384,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .main{
   label{
-      color: #888888;
+      color: $secondary-dark;
   }
   .menu{
       display: flex;
@@ -386,14 +396,41 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
           cursor: pointer;
           display: inline-block;
           padding: 8px 15px;
-          color: #000;
           font-family: sans-serif;
-          background-color: #E9E9E9;
+          background-color: $secondary-light;
           &.selected{
-              background-color: #025E9B;
-              color: #fff;
+              background-color: $primary;
+              color: $white;
             }
       }
   }
+}
+.table-box {
+    padding: 24px;
+    width: 100%;
+
+    .user-detail {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .sub-title {
+            font-size: 14px;
+            line-height: 24px;
+            color: $secondary-dark;
+        }
+    }
+}
+.table-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+       
+        td{
+            flex: 1;
+            text-align: start;
+            font-weight: 500;
+            color: $secondary-dark;
+            padding: 0.5rem 0;
+        }
 }
 

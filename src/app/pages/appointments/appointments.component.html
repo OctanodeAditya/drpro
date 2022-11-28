@@ -15,20 +15,31 @@
       </div>
   </div>
 
-
-
-  <div class="table-body">
-      <div class="no-records" >
-          <div class="no-records-inner py-5">
-              <div class="no-records-icon">
-                  <img src="../../../assets/images/no-appointment.png" alt="">
-              </div>
-              <div class="no-records-content">
-                  <h4>No appointment !</h4>
-                  <p>To Book an Appointmnet</p>
-                  <!-- <button class= "primary-btn">Book Appointment</button> -->
-              </div>
-          </div>
-      </div>
-  </div>
+  <table class="table-box">
+   <tr class="table-header">
+    <th>Patient</th>
+    <th>Status</th>
+    <th>Date & Time</th>
+    <th>Phone</th>
+    <th>Consultant</th>
+    <th>Action</th>
+   </tr>
+   <tr class="table-body">
+    <td>
+        <div class="user-detail">
+            <p-avatar label="A T" styleClass="p-mr-2" 
+            [style]="{'background-color':'#2196F3', 'color': '#ffffff'}" shape="circle"></p-avatar>
+            <div class="right">
+                <label>Aditya Tripathi</label>
+                <p class="sub-title">26 Year,<span>Male</span></p>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div class="status">
+            <p-tag styleClass="p-mr-2" value="Primary"></p-tag>
+        </div>
+    </td>
+   </tr>
+  </table>
 </div>
