@@ -17,6 +17,7 @@ import {AvatarGroupModule} from 'primeng/avatargroup';
 import {MenuModule} from 'primeng/menu';
 import {MenuItem} from 'primeng/api';
 import { TagModule } from 'primeng/tag';
+import {TabViewModule} from 'primeng/tabview';
 
 
 
@@ -54,7 +55,8 @@ import { DemoComponent } from './common/demo/demo.component';
     AvatarModule,
     AvatarGroupModule,
     MenuModule,
-    TagModule
+    TagModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
