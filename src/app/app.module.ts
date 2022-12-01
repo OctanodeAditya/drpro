@@ -18,9 +18,8 @@ import {MenuModule} from 'primeng/menu';
 import {MenuItem} from 'primeng/api';
 import { TagModule } from 'primeng/tag';
 import {TabViewModule} from 'primeng/tabview';
-
-
-
+import {InputSwitchModule} from 'primeng/inputswitch';
+import {DividerModule} from 'primeng/divider';
 
 
 import { HeaderComponent } from './common/header/header.component';
@@ -56,9 +55,15 @@ import { DemoComponent } from './common/demo/demo.component';
     AvatarGroupModule,
     MenuModule,
     TagModule,
-    TabViewModule
+    TabViewModule,
+    InputSwitchModule,
+    DividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  checked1: boolean = false;
+
+  checked2: boolean = true;
+ }

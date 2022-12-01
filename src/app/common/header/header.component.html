@@ -15,18 +15,20 @@
       New
       <i class="pi pi-angle-down"></i>
     </button>
-    <p-menu #menu [popup]="true" [model]="items"></p-menu>    
+    <p-menu #menu [popup]="true" [model]="items"></p-menu>
     <div class="header-right">
       <div class="header-button">
         <button pButton pRipple type="button" icon="pi pi-search"
-          class="p-button-rounded p-button-secondary p-button-text"></button>
-        <button pButton pRipple type="button" icon="pi pi-microsoft"
-          class="p-button-rounded p-button-secondary p-button-text"></button>
+          class="p-button-rounded p-button-secondary p-button-text">
+        </button>
+        <div class="icon-btn">
+          <i class="pi pi-ellipsis-h"></i>
+          <i class="pi pi-ellipsis-h"></i>         
+        </div>
         <button pButton pRipple type="button" icon="pi pi-bell"
           class="p-button-rounded p-button-secondary p-button-text"></button>
-        <p-avatar label="A T" styleClass="p-mr-2" 
-          [style]="{'background-color':'#2196F3', 'color': '#ffffff'}" shape="circle"></p-avatar>
-
+        <p-avatar label="A T" styleClass="p-mr-2" [style]="{'background-color':'#2196F3', 'color': '#ffffff'}"
+          shape="circle"></p-avatar>
       </div>
     </div>
   </div>

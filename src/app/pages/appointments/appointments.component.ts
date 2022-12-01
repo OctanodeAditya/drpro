@@ -17,4 +17,7 @@ export class AppointmentsComponent {
         {label: 'This Month Appointment', icon: 'pi pi-fw pi-plus '}
     ];
   }
+  checked1: boolean = false;
+
+  checked2: boolean = true;
 }
