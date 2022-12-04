@@ -32,6 +32,8 @@ $drpro-theme: mat.define-light-theme((color: (primary: $drpro-primary,
 /* You can add global styles to this file, and also import other style files */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -558,10 +560,12 @@ $white: #fff;
     color: $primary-light;
     cursor: pointer;
   }
+
   .p-button-rounded {
     width: 1.5rem !important;
     height: 1.5rem !important;
   }
+
   .small-button {
     padding: 0.375rem 0.875rem;
   }
@@ -611,7 +615,7 @@ $white: #fff;
 // notification
 .notification-popup {
   width: 100%;
-  max-width: 500px;
+  max-width: 430px;
 
   .header-box {
     display: flex;
@@ -733,6 +737,7 @@ $white: #fff;
         align-items: center;
         justify-content: center;
       }
+
       .list-item {
         display: flex;
         align-items: center;
@@ -745,6 +750,7 @@ $white: #fff;
           margin-bottom: 16px;
           border-bottom: 1px solid $secondary;
           width: 100%;
+
           .action {
             margin-left: auto;
           }
@@ -758,26 +764,73 @@ $white: #fff;
 .action {
   display: flex;
   align-items: center;
+
   .small-button {
     padding: 0.375rem 0.875rem;
   }
 }
 
-.detail-box{
-    display: flex;
-    .right-box {
-        flex: 1;
-        max-width: 200px;
-        margin-left: 3rem;
-        .qr-box {
-            border: 1px solid #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.2rem;
-        }
+.detail-box {
+  display: flex;
+
+  .right-box {
+    flex: 1;
+    max-width: 200px;
+    margin-left: 3rem;
+
+    .qr-box {
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
     }
+  }
 }
-.w-100{
-    width: 100% !important;
+
+.w-100 {
+  width: 100% !important;
+}
+
+// Icon-list-box
+.roles {
+  background: white;
+  max-width: 440px;
+  margin-left: 24px;
+  .header-title {
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  .icon-list-box {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    flex-wrap: wrap;
+
+    .list-box {
+      text-align: center;
+      background: transparent;
+      padding: 1rem;
+      margin-right: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      max-width: 123px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+
+      &:hover {
+        background: $secondary-light;
+      }
+
+      .icon-box {
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
